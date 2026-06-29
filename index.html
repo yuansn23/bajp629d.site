@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>支援制度・生活補助金情報</title>
     <script src="https://cdn.tailwindcss.com">
-
-        
     </script>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18277909349"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18277909349">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'AW-18277909349');
-</script>
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18277909349');
+    </script>
 
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet" />
     <script>
         tailwind.config = {
             theme: {
@@ -376,11 +376,41 @@
         .p-compact-md {
             padding: 1rem 1.2rem;
         }
-        /* 图片自适应，保证完全显示 */
         .img-responsive {
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        /* 滚动公示栏样式 */
+        .scroll-container {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            animation: scroll-up 14s linear infinite;
+        }
+        .scroll-list li {
+            list-style: none;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .dark .scroll-list li {
+            border-bottom-color: #334155;
+        }
+        @keyframes scroll-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .scroll-container:hover .scroll-list {
+            animation-play-state: paused;
         }
     </style>
 </head>
@@ -390,14 +420,15 @@
     <header class="fixed top-0 left-0 right-0 z-50 header-scroll border-b border-light">
         <div class="container-narrow">
             <div class="flex items-center justify-between h-14">
-                <a href="#" class="flex items-center gap-2 font-jp-serif text-lg font-bold text-slate-800 dark:text-white"> 
+                <a href="#" class="flex items-center gap-2 font-jp-serif text-lg font-bold text-slate-800 dark:text-white">
                     サポートプラン
                 </a>
                 <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-600 dark:text-slate-300">
                     <a href="#about" class="hover:text-brand-600 transition">サービスについて</a>
                     <a href="#features" class="hover:text-brand-600 transition">特徴</a>
                     <a href="#flow" class="hover:text-brand-600 transition">流れ</a>
-                    <a href="#faq" class="hover:text-brand-600 transition">FAQ</a> 
+                    <a href="#guide" class="hover:text-brand-600 transition">制度案内</a>
+                    <a href="#faq" class="hover:text-brand-600 transition">FAQ</a>
                 </nav>
                 <button id="menuBtn" class="md:hidden p-2 text-slate-600 dark:text-slate-300" aria-label="メニュー">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -410,6 +441,7 @@
             <a href="#about" class="block hover:text-brand-600 transition">サービスについて</a>
             <a href="#features" class="block hover:text-brand-600 transition">特徴</a>
             <a href="#flow" class="block hover:text-brand-600 transition">流れ</a>
+            <a href="#guide" class="block hover:text-brand-600 transition">制度案内</a>
             <a href="#faq" class="block hover:text-brand-600 transition">FAQ</a>
             <a href="https://www.google.com" class="btn-primary w-full justify-center text-sm py-1.5">無料で確認</a>
         </div>
@@ -649,7 +681,6 @@
                 <p class="mt-1 text-compact text-slate-600 dark:text-slate-300">簡単な手順で、あなたに合った支援制度や生活サポート情報をご確認いただけます。</p>
             </div>
 
-            <!-- 新增图片 -->
             <div class="mb-6 rounded-2xl overflow-hidden shadow-card-hover">
                 <img src="img/3.jpg" alt="ご利用の流れイメージ" class="img-responsive" />
             </div>
@@ -711,6 +742,83 @@
                         </svg>
                         <span>※制度の利用可否は、各制度の条件および審査結果によって異なります。</span>
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 新規：支援制度案内 + 情報公示欄 ===== -->
+    <section class="section-pad bg-white dark:bg-slate-900 border-t border-light" id="guide">
+        <div class="container-narrow">
+            <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+                <!-- 左列：案内内容 -->
+                <div class="flex flex-col">
+                    <div class="badge mb-2.5">あなたに合った支援制度をご案内</div>
+                    <h2 class="heading-section font-jp-serif font-bold text-slate-900 dark:text-white">
+                        利用できる支援制度を<span class="text-brand-600">無料で確認</span>
+                    </h2>
+                    <p class="mt-2 text-compact text-slate-600 dark:text-slate-300">
+                        生活状況や現在の状況に応じて、ご利用いただける可能性のある支援制度や生活サポート情報をご案内しています。<br />
+                        簡単なお申し込み後、担当スタッフのLINEを追加していただくことで、一人ひとりの状況に合わせたご案内をお受けいただけます。
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-sm font-bold text-slate-800 dark:text-white">このような方におすすめ</p>
+                        <ul class="mt-1 space-y-1 text-compact-sm text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-brand-600">✅</span> 利用できる支援制度を知りたい方
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-brand-600">✅</span> 自分に合う制度があるか確認したい方
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-brand-600">✅</span> 生活に関する支援情報を探している方
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-5">
+                        <p class="text-sm font-bold text-slate-800 dark:text-white">ご利用の流れ</p>
+                        <div class="mt-2 grid grid-cols-1 gap-2">
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="step-circle !w-6 !h-6 !text-xs">1</span>
+                                <span>無料でお申し込み</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="step-circle !w-6 !h-6 !text-xs">2</span>
+                                <span>担当スタッフのLINEを追加</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="step-circle !w-6 !h-6 !text-xs">3</span>
+                                <span>現在の状況に合わせたご案内を受け取る</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <a href="https://www.google.com" class="btn-primary text-sm py-2 px-6">
+                            無料で申し込む
+                        </a>
+                    </div>
+
+                    <div class="mt-3 text-xs text-slate-500 dark:text-slate-400 space-y-0.5">
+                        <p>※ご案内内容は、お住まいの地域や現在の状況などにより異なります。</p>
+                        <p>※制度の利用可否や条件は各制度の基準に基づきます。</p>
+                    </div>
+                </div>
+
+                <!-- 右列：情報公示栏（滚动） -->
+                <div class="bg-slate-50 dark:bg-slate-800/70 rounded-xl p-5 border border-light dark:border-slate-700 shadow-card flex flex-col min-h-[360px]">
+                    <h3 class="text-base font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        最新の申請・受給情報
+                    </h3>
+                    <div class="scroll-container mt-3 flex-1">
+                        <ul class="scroll-list" id="scrollList">
+                            <!-- 通过JS动态插入重复列表实现无缝滚动 -->
+                        </ul>
+                    </div>
+                    <!-- 注記を削除しました -->
                 </div>
             </div>
         </div>
@@ -819,13 +927,14 @@
 
                 <div class="text-center pt-2 border-t border-slate-800">
                     <p class="text-xs text-slate-500">&copy; 2026 All Rights Reserved.</p>
-                <a href="ted.html" target="_blank">特定商取引法に基づく表示</a>
+                    <a href="ted.html" target="_blank">特定商取引法に基づく表示</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // ダークモード検出
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
         }
@@ -836,6 +945,44 @@
                 document.documentElement.classList.remove('dark');
             }
         });
+
+        // ---- 情報公示栏 滚动列表（10件・日本電話番号形式） ----
+        (function() {
+            const records = [
+                { area: '東京都新宿区', phone: '03-1234-5678', time: '3', type: '申請完了' },
+                { area: '大阪府大阪市', phone: '06-9876-5432', time: '7', type: '受給完了' },
+                { area: '神奈川県横浜市', phone: '045-678-9012', time: '5', type: '申請完了' },
+                { area: '愛知県名古屋市', phone: '052-345-6789', time: '4', type: '受給完了' },
+                { area: '北海道札幌市', phone: '011-234-5678', time: '6', type: '申請完了' },
+                { area: '福岡県福岡市', phone: '092-456-7890', time: '8', type: '受給完了' },
+                { area: '京都府京都市', phone: '075-123-4567', time: '2', type: '申請完了' },
+                { area: '兵庫県神戸市', phone: '078-567-8901', time: '9', type: '受給完了' },
+                { area: '埼玉県さいたま市', phone: '048-901-2345', time: '4', type: '申請完了' },
+                { area: '千葉県千葉市', phone: '043-678-9012', time: '6', type: '受給完了' }
+            ];
+
+            function createItem(rec) {
+                const color = rec.type === '申請完了' ? 'text-blue-600 dark:text-blue-400' :
+                    'text-emerald-600 dark:text-emerald-400';
+                return `<li class="${color}">
+                            <span class="font-medium">${rec.area}</span> 
+                            電話番号 <span class="font-mono">${rec.phone}</span> が 
+                            <span class="font-bold">${rec.time}</span>分で${rec.type}
+                        </li>`;
+            }
+
+            const list = document.getElementById('scrollList');
+            if (list) {
+                let html = '';
+                // 2回繰り返してシームレスに
+                for (let i = 0; i < 2; i++) {
+                    records.forEach(rec => {
+                        html += createItem(rec);
+                    });
+                }
+                list.innerHTML = html;
+            }
+        })();
     </script>
 
 </body>
