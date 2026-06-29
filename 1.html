@@ -1,1 +1,995 @@
-1
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>支援制度・生活補助金情報</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18277909349">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18277909349');
+    </script>
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81'
+                        }
+                    },
+                    fontFamily: {
+                        'jp-sans': ['Noto Sans JP', 'sans-serif'],
+                        'jp-serif': ['Noto Serif JP', 'serif']
+                    },
+                    boxShadow: {
+                        'card': '0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04)',
+                        'card-hover': '0 4px 12px rgba(0,0,0,0.05), 0 16px 40px rgba(0,0,0,0.06)',
+                        'soft': '0 2px 8px rgba(0,0,0,0.04)'
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function k2() {
+            window.open('https://www.google.com', '_blank');
+        }
+    </script>
+    <style>
+        * {
+            transition: all 0.2s ease;
+        }
+        .card-transition {
+            transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .card-transition:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        }
+        .btn-primary {
+            background: #4f46e5;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.6rem 1.6rem;
+            border-radius: 10px;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .btn-primary:hover {
+            background: #4338ca;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+        }
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #1e293b;
+            font-weight: 500;
+            padding: 0.6rem 1.6rem;
+            border-radius: 10px;
+            border: 1.5px solid #e2e8f0;
+            transition: border-color 0.2s, background 0.2s, color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .btn-secondary:hover {
+            border-color: #818cf8;
+            background: #eef2ff;
+            color: #4f46e5;
+        }
+        .btn-white {
+            background: #fff;
+            color: #1e293b;
+            font-weight: 600;
+            padding: 0.7rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.2s, transform 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .btn-white:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+            transform: translateY(-2px);
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: #eef2ff;
+            color: #4f46e5;
+            padding: 0.2rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .step-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            background: #4f46e5;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .faq-q {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: 700;
+            font-size: 0.7rem;
+            flex-shrink: 0;
+        }
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        .feature-icon {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.6rem auto;
+            font-size: 1.2rem;
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .anim-fade-up {
+            animation: fadeUp 0.5s ease-out forwards;
+        }
+        .anim-delay-1 {
+            animation-delay: 0.08s;
+            opacity: 0;
+        }
+        .anim-delay-2 {
+            animation-delay: 0.16s;
+            opacity: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .dark .card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        .dark .card-step {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        .dark .faq-item {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        .dark .text-body {
+            color: #94a3b8;
+        }
+        .dark .text-body-sm {
+            color: #94a3b8;
+        }
+        .dark .btn-secondary {
+            color: #e2e8f0;
+            border-color: #475569;
+        }
+        .dark .btn-secondary:hover {
+            border-color: #818cf8;
+            background: #1e293b;
+            color: #a5b4fc;
+        }
+        .dark .badge {
+            background: #1e293b;
+            color: #a5b4fc;
+        }
+        .dark .icon-box {
+            background: #1e293b !important;
+        }
+        .dark .feature-icon {
+            background: #1e293b !important;
+        }
+        .dark .faq-q {
+            background: #1e293b;
+            color: #a5b4fc;
+        }
+        .dark .step-circle {
+            background: #4f46e5;
+        }
+        .dark .footer-disclaimer {
+            background: #0f172a;
+            border-color: #1e293b;
+        }
+        .dark .footer-privacy {
+            background: #0f172a;
+            border-color: #1e293b;
+        }
+        .dark .border-light {
+            border-color: #1e293b;
+        }
+        .dark .bg-soft {
+            background: #0f172a;
+        }
+        .dark .bg-white {
+            background: #0f172a;
+        }
+        .dark .text-gray-600 {
+            color: #94a3b8;
+        }
+        .dark .text-gray-500 {
+            color: #64748b;
+        }
+        .dark .text-gray-400 {
+            color: #475569;
+        }
+        .dark .text-gray-300 {
+            color: #94a3b8;
+        }
+        .border-light {
+            border-color: #f1f5f9;
+        }
+        .bg-soft {
+            background: #f8fafc;
+        }
+        .container-narrow {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.2rem;
+        }
+        @media (min-width: 640px) {
+            .container-narrow {
+                padding: 0 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container-narrow {
+                padding: 0 2rem;
+            }
+        }
+        .header-scroll {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .header-scroll {
+            background: rgba(15, 23, 42, 0.92);
+        }
+        .section-pad {
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+        @media (min-width: 768px) {
+            .section-pad {
+                padding-top: 3.5rem;
+                padding-bottom: 3.5rem;
+            }
+        }
+        .heading-main {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 640px) {
+            .heading-main {
+                font-size: 2.5rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .heading-main {
+                font-size: 3.2rem;
+            }
+        }
+        .heading-section {
+            font-size: 1.6rem;
+            line-height: 1.25;
+        }
+        @media (min-width: 640px) {
+            .heading-section {
+                font-size: 2rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .heading-section {
+                font-size: 2.4rem;
+            }
+        }
+        .text-compact {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .text-compact-sm {
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        .gap-compact {
+            gap: 0.8rem;
+        }
+        .gap-compact-sm {
+            gap: 0.5rem;
+        }
+        .mt-compact {
+            margin-top: 0.6rem;
+        }
+        .mb-compact {
+            margin-bottom: 0.6rem;
+        }
+        .p-compact {
+            padding: 0.8rem 1rem;
+        }
+        .p-compact-md {
+            padding: 1rem 1.2rem;
+        }
+        .img-responsive {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 滚动公示栏样式 */
+        .scroll-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            animation: scroll-up 12s linear infinite;
+        }
+        .scroll-list li {
+            list-style: none;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .dark .scroll-list li {
+            border-bottom-color: #334155;
+        }
+        @keyframes scroll-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); } /* 因为复制了一份，共8条，移动一半高度 */
+        }
+        /* 暂停悬停 */
+        .scroll-container:hover .scroll-list {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="font-jp-sans bg-soft text-slate-800 antialiased">
+
+    <!-- ===== Navigation ===== -->
+    <header class="fixed top-0 left-0 right-0 z-50 header-scroll border-b border-light">
+        <div class="container-narrow">
+            <div class="flex items-center justify-between h-14">
+                <a href="#" class="flex items-center gap-2 font-jp-serif text-lg font-bold text-slate-800 dark:text-white">
+                    サポートプラン
+                </a>
+                <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-slate-600 dark:text-slate-300">
+                    <a href="#about" class="hover:text-brand-600 transition">サービスについて</a>
+                    <a href="#features" class="hover:text-brand-600 transition">特徴</a>
+                    <a href="#flow" class="hover:text-brand-600 transition">流れ</a>
+                    <a href="#guide" class="hover:text-brand-600 transition">制度案内</a>
+                    <a href="#faq" class="hover:text-brand-600 transition">FAQ</a>
+                </nav>
+                <button id="menuBtn" class="md:hidden p-2 text-slate-600 dark:text-slate-300" aria-label="メニュー">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-light px-5 py-3 space-y-2 text-sm font-medium">
+            <a href="#about" class="block hover:text-brand-600 transition">サービスについて</a>
+            <a href="#features" class="block hover:text-brand-600 transition">特徴</a>
+            <a href="#flow" class="block hover:text-brand-600 transition">流れ</a>
+            <a href="#guide" class="block hover:text-brand-600 transition">制度案内</a>
+            <a href="#faq" class="block hover:text-brand-600 transition">FAQ</a>
+            <a href="https://www.google.com" class="btn-primary w-full justify-center text-sm py-1.5">無料で確認</a>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(el => {
+            el.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- ===== Hero ===== -->
+    <section class="pt-20 pb-10 md:pt-24 md:pb-14 overflow-hidden" id="top">
+        <div class="container-narrow">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="anim-fade-up">
+                    <div class="badge mb-2.5">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        生活サポート・支援制度情報
+                    </div>
+                    <h1 class="heading-main font-jp-serif font-extrabold tracking-tight text-slate-900 dark:text-white">
+                        利用できる可能性のある<br />
+                        <span class="text-brand-600">支援制度</span>を確認しませんか？
+                    </h1>
+                    <p class="mt-2 text-compact text-slate-600 dark:text-slate-300 max-w-lg">
+                        生活状況に応じて、ご利用いただける可能性のある支援制度や生活サポートに関する情報をご案内しています。
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2.5">
+                        <a href="https://www.google.com" class="btn-primary">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                            無料で確認する
+                        </a>
+                        <button class="btn-secondary">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            詳しく見る
+                        </button>
+                    </div>
+                    <div class="mt-3.5 flex items-center gap-5 text-xs text-slate-500 dark:text-slate-400">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                            </svg>
+                            無料
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                            </svg>
+                            数分で完了
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                            </svg>
+                            10,000+ 利用者
+                        </span>
+                    </div>
+                </div>
+                <div class="anim-fade-up anim-delay-2">
+                    <div class="rounded-2xl overflow-hidden shadow-card-hover">
+                        <img src="img/1.jpg" alt="支援制度・生活サポート" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== サービスについて ===== -->
+    <section class="section-pad bg-white dark:bg-slate-900 border-t border-light" id="about">
+        <div class="container-narrow">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <div class="badge mx-auto">サービスについて</div>
+                <h2 class="mt-2.5 heading-section font-jp-serif font-bold text-slate-900 dark:text-white">
+                    あなたの状況に<span class="text-brand-600">合った情報</span>をご案内
+                </h2>
+                <p class="mt-1.5 text-compact text-slate-600 dark:text-slate-300">
+                    当サービスでは、生活状況に応じて参考となる支援制度や生活サポート情報をご案内しています。<br class="hidden sm:block" />
+                    簡単な質問にご回答いただくことで、ご利用いただける可能性のある制度や情報をご確認いただけます。
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 items-start">
+                <div class="space-y-3.5">
+                    <div class="card-transition bg-white dark:bg-slate-800 rounded-xl p-compact-md border border-light dark:border-slate-700 shadow-card">
+                        <div class="flex items-start gap-4">
+                            <div class="icon-box bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">支援制度の確認</h3>
+                                <p class="text-compact-sm text-slate-600 dark:text-slate-300 mt-0.5">国や自治体が提供するさまざまな支援制度の中から、あなたの状況に合った可能性のある制度を確認できます。</p>
+                                <a href="#" class="inline-flex items-center gap-1 mt-1.5 text-xs font-medium text-brand-600 hover:text-brand-700 transition">
+                                    詳しく見る
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-transition bg-white dark:bg-slate-800 rounded-xl p-compact-md border border-light dark:border-slate-700 shadow-card">
+                        <div class="flex items-start gap-4">
+                            <div class="icon-box bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">生活サポート情報</h3>
+                                <p class="text-compact-sm text-slate-600 dark:text-slate-300 mt-0.5">日常生活のサポートや福祉サービスなど、生活の質を向上させるための多様な情報をご案内します。</p>
+                                <a href="#" class="inline-flex items-center gap-1 mt-1.5 text-xs font-medium text-brand-600 hover:text-brand-700 transition">
+                                    詳しく見る
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200/60 dark:border-amber-800/30 rounded-lg px-4 py-2.5">
+                        <p class="text-amber-800 dark:text-amber-300 text-xs flex items-start gap-1.5">
+                            <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>※制度の利用可否は、各制度の条件および審査結果によって異なります。</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="rounded-2xl overflow-hidden shadow-card-hover">
+                        <img src="img/2.jpg" alt="サービス案内" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="https://www.google.com" class="btn-primary text-sm py-2.5 px-7">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    今すぐ無料で確認する
+                </a>
+                <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-1.5">簡単な質問に答えるだけで、あなたに合った情報をご案内します</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== このサービスの特徴 ===== -->
+    <section class="section-pad bg-soft dark:bg-slate-900/50 border-t border-light" id="features">
+        <div class="container-narrow">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <div class="badge mx-auto">このサービスの特徴</div>
+                <h2 class="mt-2.5 heading-section font-jp-serif font-bold text-slate-900 dark:text-white">
+                    なぜこのサービスが<span class="text-brand-600">選ばれる</span>のか
+                </h2>
+                <p class="mt-1 text-compact text-slate-600 dark:text-slate-300">あなたに合った支援制度・生活サポート情報を簡単・無料で確認いただけます</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-transition bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card">
+                    <div class="feature-icon bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">無料で確認可能</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">情報の確認はすべて無料です。</p>
+                </div>
+
+                <div class="card-transition bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card">
+                    <div class="feature-icon bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">数分で簡単チェック</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">簡単な質問で最短数分完了。</p>
+                </div>
+
+                <div class="card-transition bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card">
+                    <div class="feature-icon bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">状況に合わせた情報</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">最適な支援制度をご案内。</p>
+                </div>
+
+                <div class="card-transition bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card">
+                    <div class="feature-icon bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">スマートフォン対応</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">いつでもどこでも確認可能。</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="https://www.google.com" class="btn-primary text-sm py-2.5 px-7">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    無料で確認する
+                </a>
+                <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-1.5">今すぐあなたの状況をチェックしてみましょう</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ご利用の流れ ===== -->
+    <section class="section-pad bg-white dark:bg-slate-900 border-t border-light" id="flow">
+        <div class="container-narrow">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <div class="badge mx-auto">ご利用の流れ</div>
+                <h2 class="mt-2.5 heading-section font-jp-serif font-bold text-slate-900 dark:text-white">
+                    かんたん<span class="text-brand-600">4ステップ</span>
+                </h2>
+                <p class="mt-1 text-compact text-slate-600 dark:text-slate-300">簡単な手順で、あなたに合った支援制度や生活サポート情報をご確認いただけます。</p>
+            </div>
+
+            <div class="mb-6 rounded-2xl overflow-hidden shadow-card-hover">
+                <img src="img/3.jpg" alt="ご利用の流れイメージ" class="img-responsive" />
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-step bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card card-transition">
+                    <div class="step-circle mx-auto">1</div>
+                    <div class="w-10 h-10 rounded-full bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mx-auto mb-2 text-brand-600 dark:text-brand-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">簡単な質問に回答</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">生活状況について数問お答えください。</p>
+                    <div class="mt-2 text-slate-300 dark:text-slate-600 text-xs">↓</div>
+                </div>
+
+                <div class="card-step bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card card-transition">
+                    <div class="step-circle mx-auto">2</div>
+                    <div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-2 text-purple-600 dark:text-purple-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">状況を確認</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">回答内容をもとに状況を確認します。</p>
+                    <div class="mt-2 text-slate-300 dark:text-slate-600 text-xs">↓</div>
+                </div>
+
+                <div class="card-step bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card card-transition">
+                    <div class="step-circle mx-auto">3</div>
+                    <div class="w-10 h-10 rounded-full bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center mx-auto mb-2 text-amber-600 dark:text-amber-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">対象となる可能性のある情報をご案内</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">あなたに合った制度・サポート情報をご案内。</p>
+                    <div class="mt-2 text-slate-300 dark:text-slate-600 text-xs">↓</div>
+                </div>
+
+                <div class="card-step bg-white dark:bg-slate-800 rounded-xl p-4 text-center border border-light dark:border-slate-700 shadow-card card-transition">
+                    <div class="step-circle mx-auto">4</div>
+                    <div class="w-10 h-10 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-2 text-emerald-600 dark:text-emerald-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white">詳細をご確認ください</h3>
+                    <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">ご案内した情報の詳細をご確認ください。</p>
+                </div>
+            </div>
+
+            <div class="mt-8 max-w-3xl mx-auto">
+                <div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-200/60 dark:border-amber-800/30 rounded-lg px-4 py-2.5 text-center">
+                    <p class="text-amber-800 dark:text-amber-300 text-xs flex items-center justify-center gap-1.5">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>※制度の利用可否は、各制度の条件および審査結果によって異なります。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 新規：支援制度案内 + 情報公示欄 ===== -->
+    <section class="section-pad bg-white dark:bg-slate-900 border-t border-light" id="guide">
+        <div class="container-narrow">
+            <div class="grid lg:grid-cols-2 gap-8 items-start">
+                <!-- 左列：案内内容 -->
+                <div>
+                    <div class="badge mb-2.5">あなたに合った支援制度をご案内</div>
+                    <h2 class="heading-section font-jp-serif font-bold text-slate-900 dark:text-white">
+                        利用できる支援制度を<span class="text-brand-600">無料で確認</span>
+                    </h2>
+                    <p class="mt-2 text-compact text-slate-600 dark:text-slate-300">
+                        生活状況や現在の状況に応じて、ご利用いただける可能性のある支援制度や生活サポート情報をご案内しています。<br />
+                        簡単なお申し込み後、担当スタッフのLINEを追加していただくことで、一人ひとりの状況に合わせたご案内をお受けいただけます。
+                    </p>
+
+                    <div class="mt-4">
+                        <p class="text-sm font-bold text-slate-800 dark:text-white">このような方におすすめ</p>
+                        <ul class="mt-1 space-y-1 text-compact-sm text-slate-600 dark:text-slate-300">
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-brand-600">✅</span> 利用できる支援制度を知りたい方
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-brand-600">✅</span> 自分に合う制度があるか確認したい方
+                            </li>
+                            <li class="flex items-start gap-1.5">
+                                <span class="text-brand-600">✅</span> 生活に関する支援情報を探している方
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-5">
+                        <p class="text-sm font-bold text-slate-800 dark:text-white">ご利用の流れ</p>
+                        <div class="mt-2 grid grid-cols-1 gap-2">
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="step-circle !w-6 !h-6 !text-xs">1</span>
+                                <span>無料でお申し込み</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="step-circle !w-6 !h-6 !text-xs">2</span>
+                                <span>担当スタッフのLINEを追加</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <span class="step-circle !w-6 !h-6 !text-xs">3</span>
+                                <span>現在の状況に合わせたご案内を受け取る</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 flex flex-wrap gap-3">
+                        <a href="https://www.google.com" class="btn-primary text-sm py-2 px-5">
+                            無料で申し込む
+                        </a>
+                        <a href="https://www.google.com" class="btn-secondary text-sm py-2 px-5">
+                            LINEで詳しく相談する
+                        </a>
+                    </div>
+
+                    <div class="mt-3 text-xs text-slate-500 dark:text-slate-400 space-y-0.5">
+                        <p>※ご案内内容は、お住まいの地域や現在の状況などにより異なります。</p>
+                        <p>※制度の利用可否や条件は各制度の基準に基づきます。</p>
+                    </div>
+                </div>
+
+                <!-- 右列：情報公示栏（滚动） -->
+                <div class="bg-slate-50 dark:bg-slate-800/70 rounded-xl p-5 border border-light dark:border-slate-700 shadow-card">
+                    <h3 class="text-base font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        最新の申請・受給情報
+                    </h3>
+                    <div class="scroll-container mt-3">
+                        <ul class="scroll-list" id="scrollList">
+                            <!-- 通过JS动态插入重复列表实现无缝滚动 -->
+                        </ul>
+                    </div>
+                    <p class="mt-2 text-xs text-slate-400 dark:text-slate-500 text-center">※ 実際の事例をもとに作成したダミー情報です</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== よくある質問 ===== -->
+    <section class="section-pad bg-soft dark:bg-slate-900/50 border-t border-light" id="faq">
+        <div class="container-narrow">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <div class="badge mx-auto">よくある質問</div>
+                <h2 class="mt-2.5 heading-section font-jp-serif font-bold text-slate-900 dark:text-white">
+                    よくある<span class="text-brand-600">ご質問</span>
+                </h2>
+                <p class="mt-1 text-compact text-slate-600 dark:text-slate-300">サービスに関するよくある質問をまとめました</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-2.5">
+                <div class="faq-item bg-white dark:bg-slate-800 rounded-xl p-compact-md border border-light dark:border-slate-700 shadow-soft card-transition">
+                    <div class="flex items-start gap-3.5">
+                        <span class="faq-q">Q</span>
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white">利用料金はかかりますか？</h3>
+                            <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">情報の確認は無料です。ご利用にあたって料金は一切かかりません。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-slate-800 rounded-xl p-compact-md border border-light dark:border-slate-700 shadow-soft card-transition">
+                    <div class="flex items-start gap-3.5">
+                        <span class="faq-q">Q</span>
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white">誰でも利用できますか？</h3>
+                            <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">ご利用いただけますが、制度によって対象条件が異なります。ご自身の状況に合わせた情報をご案内いたします。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-slate-800 rounded-xl p-compact-md border border-light dark:border-slate-700 shadow-soft card-transition">
+                    <div class="flex items-start gap-3.5">
+                        <span class="faq-q">Q</span>
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white">必ず支援を受けられますか？</h3>
+                            <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">いいえ。制度ごとに利用条件や審査があり、結果を保証するものではありません。あくまで可能性のある情報をご案内するサービスです。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-slate-800 rounded-xl p-compact-md border border-light dark:border-slate-700 shadow-soft card-transition">
+                    <div class="flex items-start gap-3.5">
+                        <span class="faq-q">Q</span>
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white">どのくらい時間がかかりますか？</h3>
+                            <p class="text-compact-sm text-slate-500 dark:text-slate-400 mt-0.5">簡単な確認は数分程度で完了します。お忙しい方でも短時間でご利用いただけます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Final CTA ===== -->
+    <section class="py-10 md:py-12 bg-slate-900 dark:bg-slate-950" id="cta">
+        <div class="container-narrow text-center">
+            <h2 class="text-xl md:text-3xl font-bold text-white">まずは無料で確認してみませんか？</h2>
+            <p class="mt-2 text-compact text-slate-300 max-w-2xl mx-auto">現在の状況に応じて、ご利用いただける可能性のある支援制度や生活サポート情報をご確認いただけます。</p>
+            <div class="mt-4">
+                <a href="https://www.google.com" class="btn-white text-sm py-2.5 px-8">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    無料で確認する
+                </a>
+            </div>
+            <p class="mt-1.5 text-xs text-slate-400">簡単な質問に答えるだけで、あなたに合った情報をご案内します</p>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-slate-900 dark:bg-slate-950 border-t border-slate-800 py-8">
+        <div class="container-narrow">
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="footer-disclaimer bg-slate-800/50 dark:bg-slate-800/30 rounded-lg p-4 border border-slate-700/50">
+                    <h4 class="text-white font-semibold text-xs flex items-center gap-1.5 mb-1.5">
+                        <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        免責事項
+                    </h4>
+                    <div class="text-xs text-slate-400 leading-relaxed space-y-1">
+                        <p>本サービスは、支援制度や生活サポートに関する一般的な情報提供およびご案内を目的としており、国や自治体、関係機関とは一切関係ございません。</p>
+                        <p>提供される情報は参考情報であり、個別の状況に応じた専門的なアドバイスを代替するものではありません。実際の申請や手続きは、必ず各制度の公式窓口にてご確認ください。</p>
+                        <p>制度の利用可否や支援内容は、各制度の条件および審査結果によって異なります。本サービスは受給や審査結果を保証するものではなく、また本サービスの利用によって生じたいかなる損害についても、当社は責任を負いかねます。</p>
+                        <p>情報の正確性については細心の注意を払っておりますが、完全性を保証するものではありません。最新の情報は各制度の公式情報をご参照ください。</p>
+                    </div>
+                </div>
+
+                <div class="footer-privacy bg-slate-800/50 dark:bg-slate-800/30 rounded-lg p-4 border border-slate-700/50">
+                    <h4 class="text-white font-semibold text-xs flex items-center gap-1.5 mb-1.5">
+                        <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        個人情報保護
+                    </h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">ご入力いただいた情報は、ご案内およびお問い合わせ対応の目的でのみ利用し、適用される法令等に基づく場合を除き、ご本人の同意なく第三者へ提供することはありません。</p>
+                </div>
+
+                <div class="text-center pt-2 border-t border-slate-800">
+                    <p class="text-xs text-slate-500">&copy; 2026 All Rights Reserved.</p>
+                    <a href="ted.html" target="_blank">特定商取引法に基づく表示</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ダークモード検出
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // ---- 情報公示栏 滚动列表 ----
+        (function() {
+            // ダミーデータ（日本各地の市区町村、電話番号マスク、時間）
+            const records = [
+                { area: '東京都新宿区', phone: '1623****0498', time: '3', type: '申請完了' },
+                { area: '大阪府大阪市', phone: '090-****-1234', time: '7', type: '受給完了' },
+                { area: '神奈川県横浜市', phone: '045-***-5678', time: '5', type: '申請完了' },
+                { area: '愛知県名古屋市', phone: '052-***-9012', time: '4', type: '受給完了' },
+                { area: '北海道札幌市', phone: '011-***-3456', time: '6', type: '申請完了' },
+                { area: '福岡県福岡市', phone: '092-***-7890', time: '8', type: '受給完了' },
+                { area: '京都府京都市', phone: '075-***-2345', time: '2', type: '申請完了' },
+                { area: '兵庫県神戸市', phone: '078-***-6789', time: '9', type: '受給完了' },
+            ];
+
+            // 1件あたりの表示文を作成
+            function createItem(rec) {
+                const label = rec.type === '申請完了' ? '申請完了' : '受給完了';
+                const color = rec.type === '申請完了' ? 'text-blue-600 dark:text-blue-400' :
+                    'text-emerald-600 dark:text-emerald-400';
+                return `<li class="${color}">
+                            <span class="font-medium">${rec.area}</span> 
+                            電話番号 <span class="font-mono">${rec.phone}</span> が 
+                            <span class="font-bold">${rec.time}</span>分で${label}
+                        </li>`;
+            }
+
+            // リストを生成（2回繰り返してシームレスにする）
+            const list = document.getElementById('scrollList');
+            if (list) {
+                let html = '';
+                // 2回分追加
+                for (let i = 0; i < 2; i++) {
+                    records.forEach(rec => {
+                        html += createItem(rec);
+                    });
+                }
+                list.innerHTML = html;
+            }
+        })();
+    </script>
+
+</body>
+</html>
